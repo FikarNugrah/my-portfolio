@@ -1,0 +1,289 @@
+.about-content {
+  padding: 50px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  background-color: var(--bgc-color);
+  font-family: "Gruppo", sans-serif;
+  /* border: 2px solid red; */
+  position: relative;
+  box-shadow: 0 0 50px 80px rgb(13, 14, 20);
+  /* box-shadow: 0 0 50px 20px rgb(255, 255, 255); */
+}
+
+.intro-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.job-about {
+  width: 55%;
+  height: 9vh;
+  /* border: 2px solid red; */
+  display: flex;
+  gap: 30px;
+  position: relative;
+  transition: 0.3s width, 0.3s height 0.3s, 0.3s margin-top 0.3s,
+    1s background-color, opacity 0.5s ease-in-out;
+}
+
+.job-about-re-size {
+  height: 35vh;
+}
+
+.a-devoloper {
+  position: absolute;
+  right: 0;
+}
+
+.a-student {
+  position: absolute;
+  left: 0;
+}
+
+.a-student,
+.a-devoloper {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  border: 2px solid white;
+  gap: 10px;
+  transition: 0.3s width, 0.3s height 0.3s, 0.3s margin-top 0.3s,
+    1s background-color, opacity 0.5s ease-in-out;
+}
+
+.a-student:hover,
+.a-devoloper:hover {
+  border: 2px solid var(--green-color);
+}
+
+.re-size {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.a-student h3,
+.a-devoloper h3 {
+  color: var(--violet-color);
+  cursor: default;
+}
+.a-student p,
+.a-devoloper p {
+  margin-top: 16px;
+  text-align: center;
+  color: rgb(146, 146, 146);
+  font-size: 17px;
+  line-height: 20px;
+}
+
+/* HOBIES */
+.hobies-area {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hobies {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.hobies-area h2 {
+  text-align: center;
+  color: white;
+}
+
+.hobies i {
+  color: var(--green-color);
+}
+.hobies p {
+  color: var(--violet-color);
+}
+
+.hobies div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* APP */
+.my-app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.my-app h2 {
+  color: var(--violet-color);
+}
+
+.app-area {
+  /* border: 2px solid red; */
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  justify-content: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.app::before {
+  position: absolute;
+  content: "";
+  width: 75%;
+  /* height: 70px; */
+  bottom: 0;
+  border-bottom: 2px solid var(--violet-color);
+  transition: all 0.2s ease-out;
+}
+
+.app:hover::before {
+  width: 100%;
+}
+
+.app img {
+  width: 80px;
+}
+
+.app .btstp {
+  /* border: 2px solid red; */
+  height: 80px;
+}
+
+.app p {
+  color: white;
+}
+
+.about-content hr {
+  width: 100%;
+  border: 1px solid rgb(146, 146, 146);
+}
+
+/* MOBILE */
+@media (max-width: 760px) {
+  /* ABOUT */
+  .about-content {
+    gap: 50px;
+  }
+
+  .intro-about {
+    text-align: center;
+  }
+
+  .job-about {
+    width: 85%;
+    height: 15vh;
+    /* border: 2px solid blue; */
+  }
+
+  .job-about-re-size {
+    height: 37vh;
+  }
+  .a-devoloper {
+    width: 100%;
+    /* border: 2px solid blue; */
+    bottom: 0;
+  }
+
+  .a-student {
+    top: 0;
+    width: 100%;
+    /* border: 2px solid blue; */
+  }
+  .a-student p,
+  .a-devoloper p {
+    margin-top: 5px;
+  }
+
+  /* HOBIES */
+  .hobies {
+    flex-wrap: wrap;
+  }
+  /*  */
+
+  /*  APP  */
+  .my-app {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* border: 2px solid yellow; */
+  }
+
+  .my-app h2 {
+    color: white;
+  }
+
+  .app-area {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* TABLET */
+@media (min-width: 760px) and (max-width: 880px) {
+  .job-about {
+    width: 90%;
+    height: 9vh;
+    /* border: 2px solid red; */
+  }
+
+  .job-about-re-size {
+    height: 30vh;
+  }
+
+  .my-app {
+    margin-top: 30px;
+    /* border: 2px solid gray; */
+  }
+}
+/* TABLET V2*/
+@media (min-width: 880px) and (max-width: 1000px) {
+  .job-about {
+    width: 80%;
+    height: 9vh;
+    /* border: 2px solid red; */
+  }
+
+  .job-about-re-size {
+    height: 30vh;
+  }
+  .my-app {
+    margin-top: 30px;
+    /* border: 2px solid gray; */
+  }
+}
+
+/* LAPTOP */
+@media (min-width: 1010px) and (max-width: 1300px) {
+}

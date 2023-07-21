@@ -1,0 +1,99 @@
+.project-content {
+  position: relative;
+  background-color: var(--bgc-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 10px;
+  /* border: 2px solid red; */
+}
+
+.project-content:hover h1 {
+  letter-spacing: 3px;
+}
+
+.project-content h1 {
+  transition: all 0.2s ease-in-out;
+  color: white;
+  text-align: center;
+  font-family: "Gruppo", sans-serif;
+}
+
+.my-project {
+  display: grid;
+  grid-template-areas: "img1 img2" "img3 img4";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+  gap: 30px;
+  /* border: 2px solid red; */
+  width: 90%;
+}
+
+.my-project div {
+  /* border: 2px solid blue; */
+  position: relative;
+  overflow: hidden;
+}
+
+.project1 {
+  grid-area: img1;
+}
+.project2 {
+  grid-area: img2;
+}
+.project3 {
+  grid-area: img3;
+}
+.project4 {
+  grid-area: img4;
+}
+
+.my-project img {
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.my-project div h5 {
+  font-family: "Gruppo", sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: var(--violet-color);
+  filter: drop-shadow(2px 2px 4px rgb(255, 0, 255));
+  width: 100%;
+  text-align: center;
+  padding-top: 3%;
+  backdrop-filter: blur(10px);
+  bottom: -100px;
+  height: 30%;
+  /* border: 2px solid red; */
+  transition: all 0.3s ease-out;
+}
+
+.my-project div .bk {
+  color: var(--violet-color);
+}
+
+.my-project div:hover img {
+  filter: grayscale(100%);
+}
+
+.my-project div:hover h5 {
+  bottom: 0;
+}
+
+.project-content hr {
+  width: 100%;
+}
+
+/*  */
+@media (max-width: 600px) {
+  .my-project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
